@@ -1,0 +1,19 @@
+
+    
+<div class="container text-center">
+  <br>
+  <h1><%= @company.title %></h1>
+</div>
+
+<h5>Reclamos:</h5>
+<ul id="reclamos">
+  <% @company.complaints.sort_by(&:created_at).each do |complaint| %>
+    <li><strong><%= complaint.user.username %>:</strong> <%= complaint.comment %></li>
+  <% end %>
+</ul>
+
+<%= form_with(model: [@complaint], url: company_complaints_path(company_id: @company.id)) do |f| %>
+  <%= f.label :reclamo %>
+  <%= f.text_field :comment %>
+  <%= f.submit %>
+<% end %>
