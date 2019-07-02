@@ -18,6 +18,8 @@ gem 'devise', git:'https://github.com/plataformatec/devise.git'
 
 gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 
+gem 'activeadmin'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 

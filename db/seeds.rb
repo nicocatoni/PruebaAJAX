@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation:
+  'password') if Rails.env.development? 
+
 User.destroy_all
 Company.destroy_all
 
@@ -24,4 +27,4 @@ end
     company_id: Company.order("random()").first.id,
     comment: Faker::Hacker.say_something_smart
   )
-end
+  end
