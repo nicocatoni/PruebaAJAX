@@ -21,7 +21,7 @@ gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 gem 'activeadmin'
 
 gem 'sqlite3', group: :development
-gem 'pg', group: :development
+gem 'pg', group: :production
 
 
 
